@@ -4,10 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs;
+  Dialogs, ExtCtrls, StdCtrls, Buttons, ComCtrls;
 
 type
   TfrmMainScreen = class(TForm)
+    edtPlainText: TRichEdit;
+    edtCipherText: TRichEdit;
+    btnPlainToCipher: TBitBtn;
+    btnCipherToPlain: TBitBtn;
+    pnlHeader: TPanel;
+    pnlBody: TPanel;
+    lblTitle: TLabel;
+    lblPlainText: TLabel;
+    lblCipherText: TLabel;
   private
     { Private declarations }
   public
@@ -20,5 +29,7 @@ var
 implementation
 
 {$R *.dfm}
+
+begin
 
 end.
