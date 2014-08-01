@@ -46,6 +46,8 @@
 			<DCCReference Include="MainScreen.pas">
 				<Form>frmMainScreen</Form>
 			</DCCReference>
+			<DCCReference Include="clsCaesar.pas"/>
+			<DCCReference Include="clsRailfence.pas"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>

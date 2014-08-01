@@ -21,12 +21,16 @@ object frmMainScreen: TfrmMainScreen
     Color = clInactiveBorder
     ParentBackground = False
     TabOrder = 0
+    DesignSize = (
+      849
+      154)
     object lblTitle: TLabel
-      Left = -8
-      Top = 40
-      Width = 857
-      Height = 80
+      Left = 312
+      Top = 36
+      Width = 218
+      Height = 64
       Alignment = taCenter
+      Anchors = [akLeft, akTop, akRight, akBottom]
       Caption = 'CryptSTR'
       Color = clBtnFace
       Font.Charset = DEFAULT_CHARSET
@@ -49,7 +53,7 @@ object frmMainScreen: TfrmMainScreen
     object lblPlainText: TLabel
       Left = 80
       Top = 33
-      Width = 193
+      Width = 90
       Height = 30
       Alignment = taCenter
       Caption = 'Plain Text'
@@ -63,7 +67,7 @@ object frmMainScreen: TfrmMainScreen
     object lblCipherText: TLabel
       Left = 557
       Top = 28
-      Width = 193
+      Width = 105
       Height = 30
       Alignment = taCenter
       Caption = 'Cipher Text'
