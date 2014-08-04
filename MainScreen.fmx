@@ -20,53 +20,52 @@ object frmMainScreen: TfrmMainScreen
     Position.Y = -8.000000000000000000
     Stroke.Color = claWhite
     Width = 937.000000000000000000
+    object lblTitle: TLabel
+      Align = Center
+      AutoSize = True
+      StyledSettings = [Family, Style, FontColor]
+      Height = 64.000000000000000000
+      TextSettings.Font.Size = 48.000000000000000000
+      TextSettings.WordWrap = False
+      Text = 'CryptSTR'
+      Width = 196.000000000000000000
+    end
   end
   object rctBody: TRectangle
     Height = 481.000000000000000000
     Position.Y = 176.000000000000000000
     Width = 913.000000000000000000
-  end
-  object lblTitle: TLabel
-    AutoSize = True
-    StyledSettings = [Family, Style, FontColor]
-    Height = 64.000000000000000000
-    Position.X = 360.000000000000000000
-    Position.Y = 64.000000000000000000
-    TextSettings.Font.Size = 48.000000000000000000
-    TextSettings.WordWrap = False
-    Text = 'CryptSTR'
-    Width = 196.000000000000000000
-  end
-  object btnPlainToCipher: TButton
-    Height = 73.000000000000000000
-    Position.X = 432.000000000000000000
-    Position.Y = 296.000000000000000000
-    TabOrder = 4
-    Text = 'btnPlainToCipher'
-    Width = 97.000000000000000000
-  end
-  object btnCipherToPlain: TButton
-    Height = 73.000000000000000000
-    Position.X = 432.000000000000000000
-    Position.Y = 456.000000000000000000
-    TabOrder = 5
-    Text = 'btnCipherToPlain'
-    Width = 97.000000000000000000
-  end
-  object memPlaintext: TMemo
-    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-    Height = 241.000000000000000000
-    Position.X = 112.000000000000000000
-    Position.Y = 296.000000000000000000
-    TabOrder = 6
-    Width = 193.000000000000000000
-  end
-  object memCiphertext: TMemo
-    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-    Height = 241.000000000000000000
-    Position.X = 640.000000000000000000
-    Position.Y = 296.000000000000000000
-    TabOrder = 7
-    Width = 193.000000000000000000
+    object btnPlainToCipher: TButton
+      Height = 70.000000000000000000
+      Position.X = 420.000000000000000000
+      Position.Y = 112.000000000000000000
+      TabOrder = 0
+      Text = 'btnPlainToCipher'
+      Width = 90.000000000000000000
+    end
+    object btnCipherToPlain: TButton
+      Height = 70.000000000000000000
+      Position.X = 420.000000000000000000
+      Position.Y = 262.000000000000000000
+      TabOrder = 1
+      Text = 'btnCipherToPlain'
+      Width = 90.000000000000000000
+    end
+    object memCiphertext: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      Height = 241.000000000000000000
+      Position.X = 592.000000000000000000
+      Position.Y = 104.000000000000000000
+      TabOrder = 2
+      Width = 193.000000000000000000
+    end
+    object memPlaintext: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      Height = 241.000000000000000000
+      Position.X = 136.000000000000000000
+      Position.Y = 104.000000000000000000
+      TabOrder = 3
+      Width = 193.000000000000000000
+    end
   end
 end

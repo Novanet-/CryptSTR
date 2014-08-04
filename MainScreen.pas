@@ -12,8 +12,8 @@ type
     rctHeader: TRectangle;
     rctBody: TRectangle;
     lblTitle: TLabel;
-    btnPlainToCipher: TButton;
     btnCipherToPlain: TButton;
+    btnPlainToCipher: TButton;
     memPlaintext: TMemo;
     memCiphertext: TMemo;
   private
