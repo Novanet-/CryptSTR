@@ -92,8 +92,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\MainScreen.pas">
-            <Form>Form1</Form>
+        <DCCReference Include="MainScreen.pas">
+            <Form>frmMainScreen</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

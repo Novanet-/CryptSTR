@@ -4,10 +4,18 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
-  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls;
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Objects, FMX.Edit, FMX.Layouts, FMX.Memo;
 
 type
-  TForm1 = class(TForm)
+  TfrmMainScreen = class(TForm)
+    rctHeader: TRectangle;
+    rctBody: TRectangle;
+    lblTitle: TLabel;
+    btnPlainToCipher: TButton;
+    btnCipherToPlain: TButton;
+    memPlaintext: TMemo;
+    memCiphertext: TMemo;
   private
     { Private declarations }
   public
@@ -15,10 +23,11 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmMainScreen: TfrmMainScreen;
 
 implementation
 
 {$R *.fmx}
 
+begin
 end.
