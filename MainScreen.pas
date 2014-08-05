@@ -3,7 +3,8 @@ unit MainScreen;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Edit, FMX.Layouts, FMX.Memo, clsCaesar, clsRailfence;
 
@@ -38,25 +39,26 @@ implementation
 
 {$R *.fmx}
 
-procedure TfrmMainScreen.btnCaesarClick(Sender: TObject);
+procedure TfrmMainScreen.btnCaesarClick(Sender: TObject);  //Switches to caesar  mode
 begin
-  lblKey.Text:= 'Caesar Cipher Key';
+  lblKey.Text := 'Caesar Cipher Key';
 end;
 
-procedure TfrmMainScreen.btnRailfenceClick(Sender: TObject);
+procedure TfrmMainScreen.btnRailfenceClick(Sender: TObject); //Switches to railfence mode
 begin
-  lblKey.Text:= 'Railfence Size';
+  lblKey.Text := 'Railfence Size';
 end;
 
-procedure TfrmMainScreen.btnPlainToCipherClick(Sender: TObject);
+procedure TfrmMainScreen.btnPlainToCipherClick(Sender: TObject);  //Method to convert plaintext to ciphertext
 var
   CaesarCipher: TCaesarCipher;
   Plaintext, Ciphertext: string;
 begin
-  CaesarCipher:= TCaesarCipher.Create;
+  CaesarCipher := TCaesarCipher.Create;
   CaesarCipher.GetPlaintext(memPlaintext.Text);
-  Ciphertext:= CaesarCipher.ConvertToCipher;
+  Ciphertext := CaesarCipher.ConvertToCipher;
 end;
 
 begin
+
 end.

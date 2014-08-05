@@ -3,18 +3,18 @@ unit clsCaesar;
 interface
 
 uses
-MainScreen;
+  MainScreen;
 
 type
   TCaesarCipher = Class
-    private
-      Plaintext: string;
-      Ciphertext: string;
-    public
-      procedure GetPlaintext(Plaintext: string);
-      procedure GetCiphertext(Ciphertext: string);
-      function ConvertToCipher(Plaintext: string): string;
-      function ConvertToPlain(Ciphertext: string): string;
+  private
+    Plaintext: string;
+    Ciphertext: string;
+  public
+    procedure GetPlaintext(Plaintext: string);
+    procedure GetCiphertext(Ciphertext: string);
+    function ConvertToCipher(Plaintext: string): string;
+    function ConvertToPlain(Ciphertext: string): string;
   End;
 
 implementation
@@ -33,12 +33,12 @@ end;
 
 procedure TCaesarCipher.GetCiphertext(Ciphertext: string);
 begin
-  TCaesarCipher.Ciphertext:= Ciphertext;
+  TCaesarCipher.Ciphertext := Ciphertext;
 end;
 
 procedure TCaesarCipher.GetPlaintext(Plaintext: string);
 begin
-  TCaesarCipher.Plaintext:= Plaintext;
+  TCaesarCipher.Plaintext := Plaintext;
 end;
 
 end.
