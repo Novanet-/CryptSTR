@@ -96,6 +96,8 @@
             <Form>frmMainScreen</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="clsCaesar.pas"/>
+        <DCCReference Include="clsRailfence.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

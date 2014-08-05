@@ -22,6 +22,8 @@ type
     btnRailfence: TButton;
     edtKey: TEdit;
     lblKey: TLabel;
+    procedure btnCaesarClick(Sender: TObject);
+    procedure btnRailfenceClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,6 +37,16 @@ implementation
 
 {$R *.fmx}
 
+procedure TfrmMainScreen.btnCaesarClick(Sender: TObject);
 begin
+  lblKey.Text:= 'Caesar Cipher Key';
+end;
 
+
+procedure TfrmMainScreen.btnRailfenceClick(Sender: TObject);
+begin
+  lblKey.Text:= 'Railfence Size';
+end;
+
+begin
 end.

@@ -58,6 +58,7 @@ object frmMainScreen: TfrmMainScreen
       TabOrder = 2
       Text = 'btnCaesar'
       Width = 96.000000000000000000
+      OnClick = btnCaesarClick
     end
     object btnRailfence: TButton
       Height = 38.000000000000000000
@@ -66,6 +67,7 @@ object frmMainScreen: TfrmMainScreen
       TabOrder = 3
       Text = 'btnRailfence'
       Width = 97.000000000000000000
+      OnClick = btnRailfenceClick
     end
     object edtKey: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
