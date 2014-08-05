@@ -16,6 +16,12 @@ type
     btnPlainToCipher: TButton;
     memPlaintext: TMemo;
     memCiphertext: TMemo;
+    lblPlaintext: TLabel;
+    lblCiphertext: TLabel;
+    btnCaesar: TButton;
+    btnRailfence: TButton;
+    edtKey: TEdit;
+    lblKey: TLabel;
   private
     { Private declarations }
   public
@@ -30,4 +36,5 @@ implementation
 {$R *.fmx}
 
 begin
+
 end.

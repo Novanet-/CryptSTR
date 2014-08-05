@@ -2,8 +2,8 @@ object frmMainScreen: TfrmMainScreen
   Left = 0
   Top = 0
   Caption = 'CryptSTR'
-  ClientHeight = 652
-  ClientWidth = 911
+  ClientHeight = 529
+  ClientWidth = 891
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop, iPhone, iPad]
@@ -15,7 +15,7 @@ object frmMainScreen: TfrmMainScreen
   DesignerOSVersion = ''
   object rctHeader: TRectangle
     Fill.Color = xFFAFB3E2
-    Height = 190.000000000000000000
+    Height = 121.000000000000000000
     Position.X = -24.000000000000000000
     Position.Y = -8.000000000000000000
     Stroke.Color = claWhite
@@ -32,13 +32,13 @@ object frmMainScreen: TfrmMainScreen
     end
   end
   object rctBody: TRectangle
-    Height = 481.000000000000000000
-    Position.Y = 176.000000000000000000
+    Height = 545.000000000000000000
+    Position.Y = 112.000000000000000000
     Width = 913.000000000000000000
     object btnPlainToCipher: TButton
       Height = 70.000000000000000000
       Position.X = 420.000000000000000000
-      Position.Y = 112.000000000000000000
+      Position.Y = 88.000000000000000000
       TabOrder = 0
       Text = 'btnPlainToCipher'
       Width = 90.000000000000000000
@@ -46,26 +46,73 @@ object frmMainScreen: TfrmMainScreen
     object btnCipherToPlain: TButton
       Height = 70.000000000000000000
       Position.X = 420.000000000000000000
-      Position.Y = 262.000000000000000000
+      Position.Y = 238.000000000000000000
       TabOrder = 1
       Text = 'btnCipherToPlain'
       Width = 90.000000000000000000
     end
-    object memCiphertext: TMemo
-      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-      Height = 241.000000000000000000
-      Position.X = 592.000000000000000000
-      Position.Y = 104.000000000000000000
+    object btnCaesar: TButton
+      Height = 41.000000000000000000
+      Position.X = 176.000000000000000000
+      Position.Y = 352.000000000000000000
       TabOrder = 2
-      Width = 193.000000000000000000
+      Text = 'btnCaesar'
+      Width = 96.000000000000000000
     end
-    object memPlaintext: TMemo
-      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-      Height = 241.000000000000000000
-      Position.X = 136.000000000000000000
-      Position.Y = 104.000000000000000000
+    object btnRailfence: TButton
+      Height = 38.000000000000000000
+      Position.X = 640.000000000000000000
+      Position.Y = 355.000000000000000000
       TabOrder = 3
+      Text = 'btnRailfence'
+      Width = 97.000000000000000000
+    end
+    object edtKey: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Position.X = 414.000000000000000000
+      Position.Y = 365.000000000000000000
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      object lblKey: TLabel
+        Height = 22.000000000000000000
+        Position.Y = -24.000000000000000000
+        Text = 'Caesar Cipher Key'
+        Width = 100.000000000000000000
+      end
+    end
+    object lblPlaintext: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Height = 25.000000000000000000
+      Position.X = 88.000000000000000000
+      Position.Y = 56.000000000000000000
+      TextSettings.Font.Size = 18.000000000000000000
+      Text = 'Plaintext'
       Width = 193.000000000000000000
+      object memPlaintext: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Height = 241.000000000000000000
+        Position.Y = 24.000000000000000000
+        TabOrder = 1
+        Width = 193.000000000000000000
+      end
+    end
+    object lblCiphertext: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Height = 25.000000000000000000
+      Position.X = 601.000000000000000000
+      Position.Y = 56.000000000000000000
+      TextSettings.Font.Size = 18.000000000000000000
+      Text = 'Ciphertext'
+      Width = 120.000000000000000000
+      object memCiphertext: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Height = 241.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 24.000000000000000000
+        TabOrder = 1
+        Width = 193.000000000000000000
+      end
     end
   end
 end
