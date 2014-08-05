@@ -3,7 +3,7 @@ unit clsRailfence;
 interface
 
 type
-  Railfence = Class
+  TRailfence = Class
     private
       Plaintext: string;
       Ciphertext: string;
@@ -13,5 +13,13 @@ type
   End;
 
 implementation
+
+function ConvertToCipher(Plaintext: string): string;
+begin
+end;
+
+function ConvertToPlain(Ciphertext: string): string;
+begin
+end;
 
 end.

@@ -42,6 +42,7 @@ object frmMainScreen: TfrmMainScreen
       TabOrder = 0
       Text = 'btnPlainToCipher'
       Width = 90.000000000000000000
+      OnClick = btnPlainToCipherClick
     end
     object btnCipherToPlain: TButton
       Height = 70.000000000000000000
