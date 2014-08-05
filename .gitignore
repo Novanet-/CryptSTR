@@ -4,3 +4,4 @@ CryptSTR.identcache
 CryptSTR.dproj.local
 prjgCryptSTR.groupproj.local
 CryptSTR.gex
+*.dcu

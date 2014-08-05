@@ -2,9 +2,6 @@ unit clsRailfence;
 
 interface
 
-uses
-  MainScreen;
-
 type
   TRailfence = Class
   private

@@ -37,7 +37,7 @@ object frmMainScreen: TfrmMainScreen
     Width = 913.000000000000000000
     object btnPlainToCipher: TButton
       Height = 70.000000000000000000
-      Position.X = 420.000000000000000000
+      Position.X = 412.000000000000000000
       Position.Y = 88.000000000000000000
       TabOrder = 0
       Text = 'btnPlainToCipher'
@@ -46,7 +46,7 @@ object frmMainScreen: TfrmMainScreen
     end
     object btnCipherToPlain: TButton
       Height = 70.000000000000000000
-      Position.X = 420.000000000000000000
+      Position.X = 412.000000000000000000
       Position.Y = 238.000000000000000000
       TabOrder = 1
       Text = 'btnCipherToPlain'
@@ -54,7 +54,7 @@ object frmMainScreen: TfrmMainScreen
     end
     object btnCaesar: TButton
       Height = 41.000000000000000000
-      Position.X = 176.000000000000000000
+      Position.X = 168.000000000000000000
       Position.Y = 352.000000000000000000
       TabOrder = 2
       Text = 'btnCaesar'
@@ -63,7 +63,7 @@ object frmMainScreen: TfrmMainScreen
     end
     object btnRailfence: TButton
       Height = 38.000000000000000000
-      Position.X = 640.000000000000000000
+      Position.X = 632.000000000000000000
       Position.Y = 355.000000000000000000
       TabOrder = 3
       Text = 'btnRailfence'
@@ -73,7 +73,7 @@ object frmMainScreen: TfrmMainScreen
     object edtKey: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 4
-      Position.X = 414.000000000000000000
+      Position.X = 406.000000000000000000
       Position.Y = 365.000000000000000000
       Width = 100.000000000000000000
       Height = 22.000000000000000000
@@ -87,7 +87,7 @@ object frmMainScreen: TfrmMainScreen
     object lblPlaintext: TLabel
       StyledSettings = [Family, Style, FontColor]
       Height = 25.000000000000000000
-      Position.X = 88.000000000000000000
+      Position.X = 80.000000000000000000
       Position.Y = 56.000000000000000000
       TextSettings.Font.Size = 18.000000000000000000
       Text = 'Plaintext'
@@ -103,7 +103,7 @@ object frmMainScreen: TfrmMainScreen
     object lblCiphertext: TLabel
       StyledSettings = [Family, Style, FontColor]
       Height = 25.000000000000000000
-      Position.X = 601.000000000000000000
+      Position.X = 593.000000000000000000
       Position.Y = 56.000000000000000000
       TextSettings.Font.Size = 18.000000000000000000
       Text = 'Ciphertext'

@@ -53,11 +53,12 @@ procedure TfrmMainScreen.btnPlainToCipherClick(Sender: TObject);  //Method to co
 var
   CaesarCipher: TCaesarCipher;
   Plaintext, Ciphertext: string;
+  Key: integer;
 begin
   CaesarCipher := TCaesarCipher.Create;
-  CaesarCipher.GetPlaintext(memPlaintext.Text);
-  CaesarCipher.GetKey(edtKey.Text);
-  Ciphertext := CaesarCipher.ConvertToCipher;
+  Plaintext:= memPlaintext.Text;
+  Key:= StrtoInt(edtKey.Text);
+  Ciphertext := CaesarCipher.ConvertToCipher(Plaintext, Key);
 end;
 
 begin
