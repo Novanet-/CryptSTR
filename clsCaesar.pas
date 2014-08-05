@@ -10,7 +10,9 @@ type
   private
     Plaintext: string;
     Ciphertext: string;
+    Key: integer;
   public
+    procedure GetKey(Key:String);
     procedure GetPlaintext(Plaintext: string);
     procedure GetCiphertext(Ciphertext: string);
     function ConvertToCipher(Plaintext: string): string;
@@ -34,6 +36,11 @@ end;
 procedure TCaesarCipher.GetCiphertext(Ciphertext: string);
 begin
   TCaesarCipher.Ciphertext := Ciphertext;
+end;
+
+procedure TCaesarCipher.GetKey(Key: String);
+begin
+  TCaesarCipher.Key:= Key;
 end;
 
 procedure TCaesarCipher.GetPlaintext(Plaintext: string);

@@ -10,6 +10,7 @@ type
   private
     Plaintext: string;
     Ciphertext: string;
+    Key: integer;
   public
     procedure GetPlaintext(Plaintext: string);
     procedure GetCiphertext(Ciphertext: string);

@@ -56,6 +56,7 @@ var
 begin
   CaesarCipher := TCaesarCipher.Create;
   CaesarCipher.GetPlaintext(memPlaintext.Text);
+  CaesarCipher.GetKey(edtKey.Text);
   Ciphertext := CaesarCipher.ConvertToCipher;
 end;
 
