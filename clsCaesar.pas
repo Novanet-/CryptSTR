@@ -2,40 +2,44 @@ unit clsCaesar;
 
 interface
 
+uses
+  clsStringManipulation;
+
 type
-  TCaesarCipher = Class
+  TCaesarCipher = class
   private
     Plaintext: string;
     Ciphertext: string;
     Key: integer;
   public
-    procedure GetKey(paraKey:integer);
+    procedure GetKey(paraKey: integer);
     procedure GetPlaintext(paraPlaintext: string);
     procedure GetCiphertext(paraCiphertext: string);
     function ConvertToCipher(Plaintext: string; Key: integer): string;
     function ConvertToPlain(Ciphertext: string; Key: integer): string;
-  End;
+  end;
 
 implementation
 
 { TCaesarCipher }
 
-
 function TCaesarCipher.ConvertToCipher(Plaintext: string; Key: integer): string;
 var
+  StringManipulation: TStringManipulation;
   ChangedText: string;
   count, ASCIICode: integer;
 begin
   GetPlaintext(Plaintext);
   GetKey(Key);
   ChangedText := '';
-  For Count := 1 To Length(Plaintext) Do
-  Begin
-    ASCIICode := Ord(Plaintext[Count]);
-    //ASCIICode := ApplyShiftToASCIICodeForCharacter(ASCIICode, Key);
+  StringManipulation := TStringManipulation.Create;
+  for count := 1 to Length(Plaintext) do
+  begin
+    ASCIICode := Ord(Plaintext[count]);
+    ASCIICode := StringManipulation.ApplyShiftToASCIICodeForCharacter(ASCIICode, Key);
     ChangedText := ChangedText + Chr(ASCIICode);
-  End;
-  Ciphertext:= ChangedText;
+  end;
+  Result := ChangedText;
 end;
 
 function TCaesarCipher.ConvertToPlain(Ciphertext: string; Key: integer): string;
@@ -50,7 +54,7 @@ end;
 
 procedure TCaesarCipher.GetKey(paraKey: integer);
 begin
-  Key:= paraKey;
+  Key := paraKey;
 end;
 
 procedure TCaesarCipher.GetPlaintext(paraPlaintext: string);

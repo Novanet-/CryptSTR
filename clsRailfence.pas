@@ -3,7 +3,7 @@ unit clsRailfence;
 interface
 
 type
-  TRailfence = Class
+  TRailfence = class
   private
     Plaintext: string;
     Ciphertext: string;
@@ -13,10 +13,9 @@ type
     procedure GetCiphertext(Ciphertext: string);
     function ConvertToCipher(Plaintext: string): string;
     function ConvertToPlain(Ciphertext: string): string;
-  End;
+  end;
 
 implementation
-
 
 { TRailfence }
 

@@ -39,25 +39,28 @@ implementation
 
 {$R *.fmx}
 
-procedure TfrmMainScreen.btnCaesarClick(Sender: TObject);  //Switches to caesar  mode
+procedure TfrmMainScreen.btnCaesarClick(Sender: TObject);
+// Switches to caesar  mode
 begin
   lblKey.Text := 'Caesar Cipher Key';
 end;
 
-procedure TfrmMainScreen.btnRailfenceClick(Sender: TObject); //Switches to railfence mode
+procedure TfrmMainScreen.btnRailfenceClick(Sender: TObject);
+// Switches to railfence mode
 begin
   lblKey.Text := 'Railfence Size';
 end;
 
-procedure TfrmMainScreen.btnPlainToCipherClick(Sender: TObject);  //Method to convert plaintext to ciphertext
+procedure TfrmMainScreen.btnPlainToCipherClick(Sender: TObject);
+// Method to convert plaintext to ciphertext
 var
   CaesarCipher: TCaesarCipher;
   Plaintext, Ciphertext: string;
   Key: integer;
 begin
   CaesarCipher := TCaesarCipher.Create;
-  Plaintext:= memPlaintext.Text;
-  Key:= StrtoInt(edtKey.Text);
+  Plaintext := memPlaintext.Text;
+  Key := StrtoInt(edtKey.Text);
   Ciphertext := CaesarCipher.ConvertToCipher(Plaintext, Key);
 end;
 
