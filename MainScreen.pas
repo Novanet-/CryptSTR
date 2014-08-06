@@ -62,6 +62,7 @@ begin
   Plaintext := memPlaintext.Text;
   Key := StrtoInt(edtKey.Text);
   Ciphertext := CaesarCipher.ConvertToCipher(Plaintext, Key);
+  memCiphertext.Text:= Ciphertext;
 end;
 
 begin

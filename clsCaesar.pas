@@ -23,6 +23,21 @@ implementation
 
 { TCaesarCipher }
 
+procedure TCaesarCipher.GetCiphertext(paraCiphertext: string);
+begin
+  Ciphertext := paraCiphertext;
+end;
+
+procedure TCaesarCipher.GetKey(paraKey: integer);
+begin
+  Key := paraKey;
+end;
+
+procedure TCaesarCipher.GetPlaintext(paraPlaintext: string);
+begin
+  Plaintext := paraPlaintext;
+end;
+
 function TCaesarCipher.ConvertToCipher(Plaintext: string; Key: integer): string;
 var
   StringManipulation: TStringManipulation;
@@ -45,21 +60,6 @@ end;
 function TCaesarCipher.ConvertToPlain(Ciphertext: string; Key: integer): string;
 begin
 
-end;
-
-procedure TCaesarCipher.GetCiphertext(paraCiphertext: string);
-begin
-  Ciphertext := paraCiphertext;
-end;
-
-procedure TCaesarCipher.GetKey(paraKey: integer);
-begin
-  Key := paraKey;
-end;
-
-procedure TCaesarCipher.GetPlaintext(paraPlaintext: string);
-begin
-  Plaintext := paraPlaintext;
 end;
 
 end.
