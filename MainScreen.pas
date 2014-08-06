@@ -39,6 +39,14 @@ implementation
 
 {$R *.fmx}
 
+function CheckCipherType(): Char;
+begin
+  if frmMainScreen.lblKey.Text = 'Caesar Cipher Key' then
+    Result := 'c'
+  else
+    Result := 'r';
+end;
+
 procedure TfrmMainScreen.btnCaesarClick(Sender: TObject);
 // Switches to caesar  mode
 begin
@@ -57,12 +65,23 @@ var
   CaesarCipher: TCaesarCipher;
   Plaintext, Ciphertext: string;
   Key: integer;
+  CipherType: Char;
 begin
-  CaesarCipher := TCaesarCipher.Create;
-  Plaintext := memPlaintext.Text;
-  Key := StrtoInt(edtKey.Text);
-  Ciphertext := CaesarCipher.ConvertToCipher(Plaintext, Key);
-  memCiphertext.Text:= Ciphertext;
+  case CipherType of
+    'c':
+      begin
+        CaesarCipher := TCaesarCipher.Create;
+        Plaintext := memPlaintext.Text;
+        Key := StrtoInt(edtKey.Text);
+        Ciphertext := CaesarCipher.ConvertToCipher(Plaintext, Key);
+        memCiphertext.Text := Ciphertext;
+        CaesarCipher.Free;
+      end;
+
+    'r':
+      begin
+      end;
+  end;
 end;
 
 begin

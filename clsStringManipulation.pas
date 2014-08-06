@@ -27,13 +27,14 @@ begin
   Result := TypeOfCharacter;
 end;
 
-function TStringManipulation.ApplyShiftToASCIICodeForCharacter(ASCIICode: integer; Key: integer): integer;
+function TStringManipulation.ApplyShiftToASCIICodeForCharacter(ASCIICode: integer;
+    Key: integer): integer;
 var
   StringManipulation: TStringManipulation;
   NewASCIICode: integer;
   TypeOfCharacter: string;
 begin
-  StringManipulation:= TStringManipulation.Create;
+  StringManipulation := TStringManipulation.Create;
   TypeOfCharacter := StringManipulation.GetTypeOfCharacter(ASCIICode);
   if TypeOfCharacter <> 'Other' then
     if TypeOfCharacter = 'Upper' then
