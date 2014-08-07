@@ -3,7 +3,7 @@ object frmMainScreen: TfrmMainScreen
   Top = 0
   Caption = 'CryptSTR'
   ClientHeight = 529
-  ClientWidth = 891
+  ClientWidth = 741
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop, iPhone, iPad]
@@ -16,10 +16,10 @@ object frmMainScreen: TfrmMainScreen
   object rctHeader: TRectangle
     Fill.Color = xFFAFB3E2
     Height = 121.000000000000000000
-    Position.X = -24.000000000000000000
+    Position.X = -8.000000000000000000
     Position.Y = -8.000000000000000000
     Stroke.Color = claWhite
-    Width = 937.000000000000000000
+    Width = 753.000000000000000000
     object lblTitle: TLabel
       Align = Center
       AutoSize = True
@@ -32,30 +32,36 @@ object frmMainScreen: TfrmMainScreen
     end
   end
   object rctBody: TRectangle
-    Height = 545.000000000000000000
+    Height = 417.000000000000000000
     Position.Y = 112.000000000000000000
-    Width = 913.000000000000000000
+    Width = 745.000000000000000000
     object btnPlainToCipher: TButton
+      StyledSettings = [Family, FontColor]
       Height = 70.000000000000000000
-      Position.X = 412.000000000000000000
+      Position.X = 324.000000000000000000
       Position.Y = 88.000000000000000000
       TabOrder = 0
-      Text = 'btnPlainToCipher'
+      Text = '-------->'
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.Style = [fsBold]
       Width = 90.000000000000000000
       OnClick = btnPlainToCipherClick
     end
     object btnCipherToPlain: TButton
+      StyledSettings = [Family, FontColor]
       Height = 70.000000000000000000
-      Position.X = 412.000000000000000000
+      Position.X = 324.000000000000000000
       Position.Y = 238.000000000000000000
       TabOrder = 1
-      Text = 'btnCipherToPlain'
+      Text = '<--------'
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.Style = [fsBold]
       Width = 90.000000000000000000
       OnClick = btnCipherToPlainClick
     end
     object btnCaesar: TButton
       Height = 41.000000000000000000
-      Position.X = 128.000000000000000000
+      Position.X = 96.000000000000000000
       Position.Y = 352.000000000000000000
       TabOrder = 2
       Text = 'btnCaesar'
@@ -64,7 +70,7 @@ object frmMainScreen: TfrmMainScreen
     end
     object btnRailfence: TButton
       Height = 38.000000000000000000
-      Position.X = 640.000000000000000000
+      Position.X = 552.000000000000000000
       Position.Y = 355.000000000000000000
       TabOrder = 3
       Text = 'btnRailfence'
@@ -74,7 +80,7 @@ object frmMainScreen: TfrmMainScreen
     object edtKey: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 4
-      Position.X = 406.000000000000000000
+      Position.X = 318.000000000000000000
       Position.Y = 365.000000000000000000
       Width = 100.000000000000000000
       Height = 22.000000000000000000
@@ -88,7 +94,7 @@ object frmMainScreen: TfrmMainScreen
     object lblPlaintext: TLabel
       StyledSettings = [Family, Style, FontColor]
       Height = 25.000000000000000000
-      Position.X = 80.000000000000000000
+      Position.X = 48.000000000000000000
       Position.Y = 56.000000000000000000
       TextSettings.Font.Size = 18.000000000000000000
       Text = 'Plaintext'
@@ -105,7 +111,7 @@ object frmMainScreen: TfrmMainScreen
     object lblCiphertext: TLabel
       StyledSettings = [Family, Style, FontColor]
       Height = 25.000000000000000000
-      Position.X = 593.000000000000000000
+      Position.X = 481.000000000000000000
       Position.Y = 56.000000000000000000
       TextSettings.Font.Size = 18.000000000000000000
       Text = 'Ciphertext'
