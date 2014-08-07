@@ -26,6 +26,7 @@ type
     procedure btnCaesarClick(Sender: TObject);
     procedure btnRailfenceClick(Sender: TObject);
     procedure btnPlainToCipherClick(Sender: TObject);
+    procedure btnCipherToPlainClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,7 +71,7 @@ var
 begin
   Plaintext := memPlaintext.Text;
   Key := StrtoInt(edtKey.Text);
-  CipherType:= CheckCipherType;
+  CipherType := CheckCipherType;
   case CipherType of
     'c':
       begin
@@ -85,6 +86,36 @@ begin
         Railfence := TRailfence.Create;
         Ciphertext := Railfence.ConvertToCipher(Plaintext, Key);
         memCiphertext.Text := Ciphertext;
+        Railfence.Free;
+      end;
+  end;
+end;
+
+procedure TfrmMainScreen.btnCipherToPlainClick(Sender: TObject);
+var
+  CaesarCipher: TCaesarCipher;
+  Railfence: TRailfence;
+  Plaintext, Ciphertext: string;
+  Key: integer;
+  CipherType: Char;
+begin
+  Ciphertext := memCiphertext.Text;
+  Key := StrtoInt(edtKey.Text);
+  CipherType := CheckCipherType;
+  case CipherType of
+    'c':
+      begin
+        CaesarCipher := TCaesarCipher.Create;
+        Plaintext := CaesarCipher.ConvertToPlain(Ciphertext, Key);
+        memPlaintext.Text := Plaintext;
+        CaesarCipher.Free;
+      end;
+
+    'r':
+      begin
+        Railfence := TRailfence.Create;
+        Plaintext := Railfence.ConvertToCipher(Ciphertext, Key);
+        memPlaintext.Text := Plaintext;
         Railfence.Free;
       end;
   end;

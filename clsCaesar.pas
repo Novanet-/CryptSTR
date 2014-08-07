@@ -10,7 +10,6 @@ type
   private
     Plaintext: string;
     Ciphertext: string;
-    Key: integer;
   public
     function ConvertToCipher(Plaintext: string; Key: integer): string;
     function ConvertToPlain(Ciphertext: string; Key: integer): string;
@@ -23,7 +22,6 @@ implementation
 function TCaesarCipher.ConvertToCipher(Plaintext: string; Key: integer): string;
 var
   StringManipulation: TStringManipulation;
-  ChangedText: string;
   count, ASCIICode: integer;
 begin
   Ciphertext := '';
@@ -39,8 +37,21 @@ begin
 end;
 
 function TCaesarCipher.ConvertToPlain(Ciphertext: string; Key: integer): string;
+var
+  StringManipulation: TStringManipulation;
+  count, ASCIICode: integer;
 begin
-
+  Plaintext := '';
+  Key:= -Key;
+  StringManipulation := TStringManipulation.Create;
+  for count := 1 to Length(Ciphertext) do
+  begin
+    ASCIICode := Ord(Ciphertext[count]);
+    ASCIICode := StringManipulation.ApplyShiftToASCIICodeForCharacter(ASCIICode, Key);
+    Plaintext := Plaintext + Chr(ASCIICode);
+  end;
+  StringManipulation.Free;
+  Result := Plaintext;
 end;
 
 end.
