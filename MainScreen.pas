@@ -63,16 +63,18 @@ procedure TfrmMainScreen.btnPlainToCipherClick(Sender: TObject);
 // Method to convert plaintext to ciphertext
 var
   CaesarCipher: TCaesarCipher;
+  Railfence: TRailfence;
   Plaintext, Ciphertext: string;
   Key: integer;
   CipherType: Char;
 begin
+  Plaintext := memPlaintext.Text;
+  Key := StrtoInt(edtKey.Text);
+  CipherType:= CheckCipherType;
   case CipherType of
     'c':
       begin
         CaesarCipher := TCaesarCipher.Create;
-        Plaintext := memPlaintext.Text;
-        Key := StrtoInt(edtKey.Text);
         Ciphertext := CaesarCipher.ConvertToCipher(Plaintext, Key);
         memCiphertext.Text := Ciphertext;
         CaesarCipher.Free;
@@ -80,6 +82,10 @@ begin
 
     'r':
       begin
+        Railfence := TRailfence.Create;
+        Ciphertext := Railfence.ConvertToCipher(Plaintext, Key);
+        memCiphertext.Text := Ciphertext;
+        Railfence.Free;
       end;
   end;
 end;

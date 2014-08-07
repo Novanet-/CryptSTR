@@ -9,32 +9,32 @@ type
     Ciphertext: string;
     Key: integer;
   public
-    procedure GetPlaintext(Plaintext: string);
-    procedure GetCiphertext(Ciphertext: string);
-    function ConvertToCipher(Plaintext: string): string;
-    function ConvertToPlain(Ciphertext: string): string;
+    function ConvertToCipher(Plaintext: string; Key: integer): string;
+    function ConvertToPlain(Ciphertext: string; Key: integer): string;
   end;
 
 implementation
 
 { TRailfence }
 
-function TRailfence.ConvertToCipher(Plaintext: string): string;
+function TRailfence.ConvertToCipher(Plaintext: string; Key: integer): string;
+var
+  count1, count2: integer;
 begin
-
+  Ciphertext := '';
+  for count1 := 1 to Key do
+  begin
+    count2 := count1;
+    while count2 <= Length(Plaintext) do
+    begin
+      Ciphertext := Ciphertext + Plaintext[count2];
+      count2 := count2 + Key;
+    end;
+  end;
+  Result := Ciphertext;
 end;
 
-function TRailfence.ConvertToPlain(Ciphertext: string): string;
-begin
-
-end;
-
-procedure TRailfence.GetCiphertext(Ciphertext: string);
-begin
-
-end;
-
-procedure TRailfence.GetPlaintext(Plaintext: string);
+function TRailfence.ConvertToPlain(Ciphertext: string; Key: integer): string;
 begin
 
 end;

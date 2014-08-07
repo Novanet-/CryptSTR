@@ -98,6 +98,7 @@ object frmMainScreen: TfrmMainScreen
         Position.Y = 24.000000000000000000
         TabOrder = 1
         Width = 193.000000000000000000
+        TextSettings.WordWrap = True
       end
     end
     object lblCiphertext: TLabel
@@ -115,6 +116,7 @@ object frmMainScreen: TfrmMainScreen
         Position.Y = 24.000000000000000000
         TabOrder = 1
         Width = 193.000000000000000000
+        TextSettings.WordWrap = True
       end
     end
   end

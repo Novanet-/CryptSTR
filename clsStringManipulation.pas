@@ -27,8 +27,7 @@ begin
   Result := TypeOfCharacter;
 end;
 
-function TStringManipulation.ApplyShiftToASCIICodeForCharacter(ASCIICode: integer;
-    Key: integer): integer;
+function TStringManipulation.ApplyShiftToASCIICodeForCharacter(ASCIICode: integer; Key: integer): integer;
 var
   StringManipulation: TStringManipulation;
   NewASCIICode: integer;
@@ -43,6 +42,7 @@ begin
       NewASCIICode := ((26 + ASCIICode - Ord('a') + Key) mod 26) + Ord('a')
   else
     NewASCIICode := ASCIICode;
+  StringManipulation.Free;
   Result := NewASCIICode;
 end;
 
