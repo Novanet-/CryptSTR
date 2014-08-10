@@ -64,7 +64,7 @@ object frmMainScreen: TfrmMainScreen
       Position.X = 96.000000000000000000
       Position.Y = 352.000000000000000000
       TabOrder = 2
-      Text = 'btnCaesar'
+      Text = 'Caesar Cipher'
       Width = 96.000000000000000000
       OnClick = btnCaesarClick
     end
@@ -73,7 +73,7 @@ object frmMainScreen: TfrmMainScreen
       Position.X = 552.000000000000000000
       Position.Y = 355.000000000000000000
       TabOrder = 3
-      Text = 'btnRailfence'
+      Text = 'Railfence'
       Width = 97.000000000000000000
       OnClick = btnRailfenceClick
     end

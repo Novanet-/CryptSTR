@@ -114,7 +114,7 @@ begin
     'r':
       begin
         Railfence := TRailfence.Create;
-        Plaintext := Railfence.ConvertToCipher(Ciphertext, Key);
+        Plaintext := Railfence.ConvertToPlain(Ciphertext, Key);
         memPlaintext.Text := Plaintext;
         Railfence.Free;
       end;
